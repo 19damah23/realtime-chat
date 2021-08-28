@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
 body {
+  @apply font-rubic;
   background: #e5e5e5;
 }
 
@@ -12,7 +13,7 @@ body {
 }
 
 .md-input-main {
-  @apply font-rubic text-base w-full font-normal;
+  @apply text-base w-full font-normal;
 }
 
 .md-input-box {
@@ -63,4 +64,25 @@ body {
   @apply md-label-focus text-gray-500 text-sm;
   transform: translate(0, -50px) scale(0.75);
   transform-origin: top left;
+}
+
+.listChat {
+  height: calc(100vh - 200px);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* track */
+::-webkit-scrollbar-track {
+  background: #f7f7f7;
+}
+/* handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-100;
+}
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-200;
 }
