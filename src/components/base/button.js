@@ -1,4 +1,4 @@
-const Button = ({ type, title, logo, giveClass, buttonClass, classLabel }) => {
+const Button = ({ type, title, logo, giveClass, buttonClass }) => {
   return (
     <div className={`mb-4 ${giveClass}`}>
       <button type={type} className={`flex max-w-sm w-full ${buttonClass} uppercase font-rubic shadow-md rounded-full py-3 justify-center items-center`}>

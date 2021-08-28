@@ -12,7 +12,7 @@ const Register = () => {
         </Link>
         <h3 className="text-center font-rubic text-2xl font-medium text-indigo-300">Register</h3>
       </div>
-      <span className="font-rubic text-sm font-normal my-8">Hi, Welcome back!</span>
+      <span className="font-rubic text-sm font-normal my-8">Let’s create your account!</span>
       <Input name="name" type="text" placeholder="Name" giveClass="border-b mb-4" label="Name" />
       <Input name="email" type="email" placeholder="Email" giveClass="border-b my-4" label="Email" />
       <Input name="password" type="password" placeholder="Password" giveClass="border-b mt-4" label="Password" />
