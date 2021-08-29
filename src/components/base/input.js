@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Input = ({ id, type, name, giveClass, placeholder, label }) => {
+const Input = ({ id, type, name, giveClass, placeholder, label, onChange }) => {
   return (
     <div class={`md-input-main ${giveClass}`}>
       <div class="md-input-box">
@@ -9,7 +9,8 @@ const Input = ({ id, type, name, giveClass, placeholder, label }) => {
           name={name}
           type={type}
           class="md-input"
-          placeholder=" "
+          placeholder=""
+          onChange={onChange}
         />
         <label for={placeholder} class="md-label">{label}</label>
         <div class="md-input-underline" />

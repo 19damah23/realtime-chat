@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Register from './pages/auth/register';
 import Login from './pages/auth/login';
 import Home from './pages/home';
+import "@material-tailwind/react/tailwind.css";
 
 function App() {
   useEffect(() => {

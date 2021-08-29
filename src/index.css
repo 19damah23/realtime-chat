@@ -86,3 +86,19 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-200;
 }
+
+.message-body {
+  height: calc(100vh - 192px);
+}
+
+.tippy-content .bg-white.border-0.block.z-50.font-normal.leading-normal.text-sm.max-w-xs.text-left.no-underline.break-words.rounded-lg.shadow-xl.undefined {
+  @apply bg-indigo-400 text-white;
+}
+
+.text-gray-700.font-normal.px-4.pb-4.undefined {
+  @apply text-white flex flex-col py-2 items-start justify-center;
+}
+
+.text-gray-700.font-normal.px-4.pb-4.undefined a {
+  @apply py-2 flex gap-2;
+}

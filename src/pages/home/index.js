@@ -2,8 +2,10 @@ import Search from "../../components/base/search";
 import People from "../../assets/man.png";
 import ListMessage from "../../components/base/listMessage";
 import { useState } from "react";
+import ChatRoom from "../../components/base/ChatRoom";
 
 const Home = () => {
+  const [selectedChat, setSelectedChat] = useState([])
   const [message, setMessage] = useState([
     {name: 'Agus', message: 'Hello bro...',status: 2 },
     {name: 'Agus', message: 'Hello bro...',status: 2 },
@@ -20,7 +22,7 @@ const Home = () => {
   return (
     <>
       <div className="flex">
-        <div className="h-screen bg-white lg:w-1/4 px-8">
+        <div className="h-screen bg-white w-1/4 px-8 border-r">
           <div className="h-40">
             <div className="flex justify-between items-center mt-8 text-indigo-400">
               <h3 className="font-medium text-2xl">TELEGRAM</h3>
@@ -49,8 +51,10 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="h-screen lg:w-3/4 bg-gray-50 flex justify-center items-center">
-          <span className="">Please select a chat to start messaging</span>
+
+        <div className="h-screen w-3/4 bg-gray-50">
+          {/* <span className="">Please select a chat to start messaging</span> */}
+          <ChatRoom username="Agus" status="online" profile={People} />
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
-const Button = ({ type, title, logo, giveClass, buttonClass }) => {
+const Button = ({ type, title, logo, giveClass, buttonClass, onClick }) => {
   return (
     <div className={`mb-4 ${giveClass}`}>
-      <button type={type} className={`flex max-w-sm w-full ${buttonClass} uppercase font-rubic shadow-md rounded-full py-3 justify-center items-center`}>
+      <button type={type} className={`flex max-w-sm w-full ${buttonClass} uppercase font-rubic shadow-md rounded-full py-3 justify-center items-center`} onClick={onClick}>
         {logo ? (
           <div className="flex sm:flex-cols-12 gap-2">
             <div className="col-span-1">
