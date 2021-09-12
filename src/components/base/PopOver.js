@@ -3,8 +3,9 @@ import Popover from "@material-tailwind/react/Popover";
 import PopoverContainer from "@material-tailwind/react/PopoverContainer";
 import PopoverBody from "@material-tailwind/react/PopoverBody";
 import { Link } from "react-router-dom";
+import Contacts from "../../assets/Contacts.png";
 
-const PopOver = () => {
+const PopOver = ({ actionClick }) => {
   const buttonRef = useRef();
 
   return (
@@ -32,6 +33,10 @@ const PopOver = () => {
       <Popover placement="bottom" ref={buttonRef}>
         <PopoverContainer>
           <PopoverBody>
+            <label for="my-drawer-4" className={`flex gap-2 my-2 cursor-pointer lg:hidden`}>
+              <img src={Contacts} alt="contact" className="w-5 h-5" />
+              Contacts
+            </label>
             <Link to="/">
               <svg
                 className="w-6 h-6"
@@ -49,7 +54,7 @@ const PopOver = () => {
               </svg>{" "}
               Call
             </Link>
-            <Link to="/">
+            <label className="my-1 cursor-pointer flex gap-2" onClick={actionClick}>
               <svg
                 className="w-6 h-6"
                 fill="none"
@@ -65,7 +70,7 @@ const PopOver = () => {
                 />
               </svg>
               Delete chat history
-            </Link>
+            </label>
             <Link to="/">
               <svg
                 className="w-6 h-6"

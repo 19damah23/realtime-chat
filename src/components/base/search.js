@@ -1,9 +1,11 @@
-const Search = ({ placeholder, giveClass, onChange, onClick }) => {
+const Search = ({ placeholder, giveClass, onChange, onClick, value }) => {
   return (
     <div class={`flex ${giveClass}`}>
       <input
         className="w-full rounded-full ml-1 border focus:outline-none px-4"
         type="text"
+        name="search"
+        value={value}
         placeholder={placeholder}
         onChange={onChange}
       />

@@ -1,14 +1,13 @@
 import Button from "../../components/base/button";
 import Input from "../../components/base/input";
 import Back from "../../assets/back.png";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import backendApi from "../../configs/api/backendApi";
 import { ToastContainer, toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-  const history = useHistory()
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -26,7 +25,7 @@ const Register = () => {
   const handleRegister = () => {
     backendApi.post(`auth/register`, form)
       .then((res) => {
-        history.push('/login')
+        toast.success('Register success, verify your email now!', { position: toast.POSITION.TOP_RIGHT })
       })
       .catch((err) => {
         toast.error(err.response.data.message, { position: toast.POSITION.TOP_RIGHT })
@@ -34,11 +33,11 @@ const Register = () => {
   }
 
   return (
-    <>
-      <ToastContainer draggable={false} transition={Zoom} autoClose={2000} />
-      <div className="auth bg-white mx-auto py-10 mt-10 rounded-lg h-full flex flex-col px-16">
+    <div className="pt-10">
+      <ToastContainer draggable={false} transition={Zoom} autoClose={4000} />
+      <div className="auth bg-white mx-auto py-10 rounded-lg h-full flex flex-col px-16">
         <div className="flex gap-32">
-          <Link href="/login">
+          <Link to="/login">
             <img src={Back} alt="back" />
           </Link>
           <h3 className="text-center font-rubic text-2xl font-medium text-indigo-300">
@@ -88,7 +87,7 @@ const Register = () => {
           buttonClass="focus:outline-none hover:bg-gray-200 text-base border text-indigo-400"
         />
       </div>
-    </>
+    </div>
   );
 };
 
