@@ -30,7 +30,7 @@ const Home = () => {
   const [userSelect, setUserSelect] = useState({});
 
   const setupSocket = () => {
-    const resultSocket = io("ws://telegram.muchamadagushermawan.online", {
+    const resultSocket = io("https://telegram.muchamadagushermawan.online", {
       query: {
         token: localStorage.getItem("token"),
       },
