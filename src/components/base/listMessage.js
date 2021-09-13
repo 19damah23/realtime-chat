@@ -19,7 +19,7 @@ const ListMessage = ({ users, handleClick, message, other }) => {
   return (
     <>
       <img
-        src={users.avatar != null ? `${process.env.REACT_APP_BACKEND_API}files/${users.avatar}` : People}
+        src={users.avatar != null ? `${process.env.REACT_APP_VERCEL_URL}files/${users.avatar}` : People}
         alt="profile"
         className="rounded-md w-12 h-12 border"
       />

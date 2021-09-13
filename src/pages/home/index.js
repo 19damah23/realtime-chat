@@ -366,7 +366,7 @@ const Home = () => {
                       <img
                         src={
                           profile.avatar
-                            ? `${process.env.REACT_APP_BACKEND_API}files/${profile.avatar}`
+                            ? `${process.env.REACT_APP_VERCEL_URL}files/${profile.avatar}`
                             : People
                         }
                         alt="profile"
@@ -549,7 +549,7 @@ const Home = () => {
               <img
                 src={
                   userSelect.avatar
-                    ? `${process.env.REACT_APP_BACKEND_API}files/${userSelect.avatar}`
+                    ? `${process.env.REACT_APP_VERCEL_URL}files/${userSelect.avatar}`
                     : People
                 }
                 alt="profile"

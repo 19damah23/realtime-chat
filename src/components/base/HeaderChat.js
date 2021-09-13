@@ -20,7 +20,7 @@ const HeaderChat = ({
       <img
         src={
           avatar
-            ? `${process.env.REACT_APP_BACKEND_API}files/${avatar}`
+            ? `${process.env.REACT_APP_VERCEL_URL}files/${avatar}`
             : People
         }
         alt="profile"
