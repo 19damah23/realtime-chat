@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div className="pt-10">
       <ToastContainer draggable={false} transition={Zoom} autoClose={4000} />
-      <div className="auth bg-white mx-auto py-10 rounded-lg h-full flex flex-col px-16">
+      <div className="w-11/12 lg:w-1/3 bg-white mx-auto py-5 lg:py-10 rounded-lg h-full flex flex-col px-8 lg:px-16">
         <h3 className="text-center font-rubic text-2xl font-medium text-indigo-300">Login</h3>
         <span className="font-rubic text-sm font-normal my-8">Hi, Welcome back!</span>
         <Input name="email" type="email" placeholder="Email" giveClass="border-b my-4" label="Email" onChange={handleInput} />
