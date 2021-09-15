@@ -23,9 +23,22 @@ export const getUser = () => (dispatch) => {
       authorization: `Bearer ${localStorage.getItem('token')}`
     }
   })
-  .then((res) => {
-    const user = res.data.user[0]
-    console.log(res.data.user)
-    dispatch({ type: actionTypes.GET_USER, payload: user })
-  })
+    .then((res) => {
+      const user = res.data.user[0]
+      console.log(res.data.user)
+      dispatch({ type: actionTypes.GET_USER, payload: user })
+    })
+}
+
+export const register = (data, history) => (dispatch) => {
+  backendApi.post(`auth/register`, data)
+    .then((res) => {
+      toast.success('Register success, verify your email now!', { position: toast.POSITION.TOP_RIGHT })
+      setTimeout(() => {
+        history.push('/login')
+      }, 4500);
+    })
+    .catch((err) => {
+      toast.error(err.response.data.message, { position: toast.POSITION.TOP_RIGHT })
+    })
 }

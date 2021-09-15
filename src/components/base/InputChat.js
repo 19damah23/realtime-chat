@@ -8,7 +8,7 @@ const InputChat = ({ onChange, onClick, message }) => {
           placeholder="Type your message..."
           value={message}
           onChange={onChange}
-          className="bg-gray-100 w-full py-2 px-3 rounded-lg focus:outline-none"
+          className="bg-gray-100 w-full py-2 px-3 rounded-lg focus:outline-none text-black"
         />
         <span className="flex text-indigo-400 gap-5 absolute right-6 top-2">
           {/* plus */}
