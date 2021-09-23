@@ -546,15 +546,17 @@ const Home = () => {
               </h3>
             </div>
             <div className="flex flex-col my-0 py-0">
+              <div className="w-20 h-20 object-contain">
               <img
                 src={
                   userSelect.avatar
-                    ? `${process.env.REACT_APP_VERCEL_URL}files/${userSelect.avatar}`
-                    : People
+                  ? `${process.env.REACT_APP_VERCEL_URL}files/${userSelect.avatar}`
+                  : People
                 }
                 alt="profile"
-                className="w-20 h-20 rounded-xl mx-auto mt-2"
-              />
+                className="w-full h-full rounded-xl mx-auto mt-2 object-cover"
+                />
+                </div>
               <div className="flex flex-col mt-8">
                 <h5 className="mt-4 text-xl font-bold">{userSelect.name}</h5>
                 <span className="text-indigo-400 font-normal text-xs">
