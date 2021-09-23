@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/muchamadagush/realtime-chat">
-    <img src="https://silentwater.altervista.org/blog/wp-content/uploads/2014/07/telegram-logo.png" alt="Logo" width="180" height="180">
+    <img src="https://silentwater.altervista.org/blog/wp-content/uploads/2014/07/telegram-logo.png" alt="Logo" width="180">
   </a>
 
   <h3 align="center">Telegram Clone</h3>
