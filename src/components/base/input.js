@@ -1,22 +1,24 @@
-import React from 'react'
+import React from "react";
 
 const Input = ({ id, type, name, giveClass, placeholder, label, onChange }) => {
-  return (
-    <div class={`md-input-main ${giveClass}`}>
-      <div class="md-input-box">
-        <input
-          id={id}
-          name={name}
-          type={type}
-          class="md-input"
-          placeholder=""
-          onChange={onChange}
-        />
-        <label for={placeholder} class="md-label">{label}</label>
-        <div class="md-input-underline" />
-      </div>
-    </div>
-  )
-}
+    return (
+        <div className={`md-input-main ${giveClass}`}>
+            <div className="md-input-box">
+                <input
+                    id={id}
+                    name={name}
+                    type={type}
+                    className="md-input"
+                    placeholder=""
+                    onChange={onChange}
+                />
+                <label htmlFor={placeholder} className="md-label">
+                    {label}
+                </label>
+                <div className="md-input-underline" />
+            </div>
+        </div>
+    );
+};
 
-export default Input
+export default Input;
