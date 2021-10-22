@@ -19,7 +19,9 @@ const ChatRoom = ({
                 actionClick={actionClick}
                 handleSetSelected={handleSetSelected}
             />
-            <ScrollToBottom className={`message-body overflow-y-auto py-2`}>
+            <ScrollToBottom
+                className={`message-body overflow-y-auto py-2 bg-base-200`}
+            >
                 {chat &&
                     chat.map((item) => (
                         <li

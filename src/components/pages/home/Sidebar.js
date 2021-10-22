@@ -192,7 +192,7 @@ const Sidebar = ({ props }) => {
                             </h3>
                         </div>
                     </div>
-                    <div className="drawer-side mt-2">
+                    <div className="drawer-side mt-2 h-full self-end">
                         <div className="flex flex-col my-0 py-0">
                             {imgPreview ? (
                                 <label htmlFor="avatar">
@@ -241,7 +241,7 @@ const Sidebar = ({ props }) => {
                                 {profile.name}
                             </h5>
                             <span className="mx-auto">{profile.username}</span>
-                            <div className="flex flex-col mt-4">
+                            <div className="flex flex-col mt-4 mx-4 h-full">
                                 <h3 className="font-medium text-2xl">
                                     Account
                                 </h3>
@@ -327,13 +327,21 @@ const Sidebar = ({ props }) => {
                                 <p className="text-sm mt-2 font-medium">
                                     Devices
                                 </p>
+                                <label className="self-center flex items-center mt-10 absolute bottom-5">
+                                    Dark
+                                    <input
+                                        type="checkbox"
+                                        className="toggle mx-3"
+                                    />
+                                    Light
+                                </label>
                             </div>
                         </div>
                     </div>
                 </>
             ) : (
                 <>
-                    <div className="h-40">
+                    <div className="h-40 px-4">
                         <div className="flex justify-between items-center mt-8 text-indigo-400">
                             <h3 className="font-medium text-2xl">TELEGRAM</h3>
                             <Menu />
@@ -351,7 +359,7 @@ const Sidebar = ({ props }) => {
                             users.map((user) => (
                                 <li
                                     key={user.id}
-                                    className="list-none flex items-center py-3 border-b"
+                                    className="list-none flex items-center py-3 border-b border-base-200 hover:bg-base-200 hover:bg-opacity-30 px-4"
                                     onClick={() =>
                                         setSelectedContact(() => user)
                                     }

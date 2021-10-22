@@ -210,11 +210,11 @@ const Home = () => {
                 transition={Zoom}
                 autoClose={4000}
             />
-            <div className="flex relative overflow-x-hidden">
+            <div className="flex relative overflow-x-hidden bg-base-200">
                 <div
-                    className={`h-screen bg-white w-screen ${
+                    className={`h-screen bg-base-100 w-screen ${
                         selectedContact !== "" ? "hidden" : "block"
-                    } lg:block lg:w-1/4 px-5 border-r`}
+                    } lg:block lg:w-1/4`}
                 >
                     <input
                         id="my-drawer"

@@ -34,7 +34,7 @@ const ListMessage = ({ users, handleClick, message, other }) => {
                 <p className="text-base font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
                     {users.name}
                 </p>
-                <span className="text-sm text-indigo-400">
+                <span className="text-sm text-indigo-400 ">
                     {chats.length > 0 ? chats[0].message : ""}
                 </span>
             </div>
