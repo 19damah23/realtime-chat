@@ -210,9 +210,9 @@ const Home = () => {
                 transition={Zoom}
                 autoClose={4000}
             />
-            <div className="flex relative overflow-x-hidden bg-base-200">
+            <div className="flex h-full relative overflow-x-hidden bg-base-200">
                 <div
-                    className={`h-screen bg-base-100 w-screen ${
+                    className={`bg-base-100 w-screen ${
                         selectedContact !== "" ? "hidden" : "block"
                     } lg:block lg:w-1/4`}
                 >
@@ -251,7 +251,7 @@ const Home = () => {
                 </div>
 
                 <div
-                    className={`h-screen w-screen ${
+                    className={`h-full w-screen ${
                         selectedContact !== "" ? "block" : "hidden"
                     } lg:w-3/4 bg-gray-50`}
                 >

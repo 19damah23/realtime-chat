@@ -3,6 +3,8 @@ import Menu from "../../base/Menu";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import Search from "../../base/search";
 import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
+import { change_theme } from "../../../configs/redux/actions/themeActions";
 
 const Sidebar = ({ props }) => {
     const {
@@ -29,7 +31,6 @@ const Sidebar = ({ props }) => {
         getUser,
         setImgPreview,
     } = props;
-    console.log(props);
 
     const handleChangeSearch = (e) => {
         e.preventDefault();
@@ -161,6 +162,15 @@ const Sidebar = ({ props }) => {
             });
     };
 
+    const handleChangeTheme = (e) => {
+        const isChecked = e.target.checked;
+        if (isChecked) return dispatch(change_theme("dark"));
+
+        dispatch(change_theme("light"));
+    };
+
+    const theme = useSelector((state) => state.theme.theme);
+
     return (
         <>
             {sidebar ? (
@@ -254,7 +264,7 @@ const Sidebar = ({ props }) => {
                                         onKeyPress={(e) =>
                                             e.key === "Enter" && updatePhone()
                                         }
-                                        className="border-b py-1 mb-1 focus:outline-none bg-gray-100"
+                                        className="border-b py-1 mb-1 focus:outline-none bg-base-300 bg-opacity-20 px-2 border-0"
                                     />
                                 ) : (
                                     <p>{profile.phone}</p>
@@ -276,7 +286,7 @@ const Sidebar = ({ props }) => {
                                             e.key === "Enter" &&
                                             updateUsername()
                                         }
-                                        className="border-b py-1 mb-1 focus:outline-none bg-gray-100"
+                                        className="border-b py-1 mb-1 focus:outline-none bg-base-300 bg-opacity-20 px-2 border-0"
                                     />
                                 ) : (
                                     <p>{profile.username}</p>
@@ -297,7 +307,7 @@ const Sidebar = ({ props }) => {
                                         onKeyPress={(e) =>
                                             e.key === "Enter" && updateBio()
                                         }
-                                        className="border-b py-1 mb-1 focus:outline-none bg-gray-100"
+                                        className="border-b py-1 mb-1 focus:outline-none bg-base-300 bg-opacity-20 px-2 border-0"
                                     />
                                 ) : (
                                     <p>{profile.bio}</p>
@@ -327,15 +337,17 @@ const Sidebar = ({ props }) => {
                                 <p className="text-sm mt-2 font-medium">
                                     Devices
                                 </p>
+                                <label className="self-center flex items-center mt-20 pb-20">
+                                    Light
+                                    <input
+                                        type="checkbox"
+                                        className="toggle mx-3"
+                                        onChange={handleChangeTheme}
+                                        checked={theme === "dark"}
+                                    />
+                                    Dark
+                                </label>
                             </div>
-                            <label className="self-center flex items-center -mt-24 mb-4">
-                                Dark
-                                <input
-                                    type="checkbox"
-                                    className="toggle mx-3"
-                                />
-                                Light
-                            </label>
                         </div>
                     </div>
                 </>

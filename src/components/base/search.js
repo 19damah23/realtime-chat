@@ -2,7 +2,7 @@ const Search = ({ placeholder, giveClass, onChange, onClick, value }) => {
     return (
         <div className={`flex ${giveClass}`}>
             <input
-                className="w-full rounded-full ml-1 border focus:outline-none px-4"
+                className="w-full rounded-full ml-1 border focus:outline-none px-4 bg-base-300 bg-opacity-50 border-0"
                 type="text"
                 name="search"
                 value={value}
