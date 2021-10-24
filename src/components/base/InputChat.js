@@ -1,8 +1,12 @@
 const InputChat = ({ onChange, onClick, message }) => {
+    const handleEnter = (e) => {
+        if (e.charCode === 13) onClick();
+    };
     return (
         <>
             <div className="relative flex w-full">
                 <input
+                    onKeyPress={handleEnter}
                     name="message"
                     type="text"
                     placeholder="Type your message..."
