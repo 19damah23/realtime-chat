@@ -327,15 +327,15 @@ const Sidebar = ({ props }) => {
                                 <p className="text-sm mt-2 font-medium">
                                     Devices
                                 </p>
-                                <label className="self-center flex items-center mt-10 absolute bottom-5">
-                                    Dark
-                                    <input
-                                        type="checkbox"
-                                        className="toggle mx-3"
-                                    />
-                                    Light
-                                </label>
                             </div>
+                            <label className="self-center flex items-center -mt-24 mb-4">
+                                Dark
+                                <input
+                                    type="checkbox"
+                                    className="toggle mx-3"
+                                />
+                                Light
+                            </label>
                         </div>
                     </div>
                 </>
