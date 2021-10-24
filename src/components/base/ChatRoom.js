@@ -23,9 +23,9 @@ const ChatRoom = ({
                 className={`message-body overflow-y-auto py-2 bg-base-200`}
             >
                 {chat &&
-                    chat.map((item) => (
+                    chat.map((item, i) => (
                         <li
-                            key={item.id}
+                            key={i}
                             className={`list-none w-max px-2 mx-4 my-1 rounded-lg text-white bottom-0  ${
                                 item.receiver !== data.id
                                     ? "p-1 bg-gray-600"
