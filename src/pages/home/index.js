@@ -210,11 +210,11 @@ const Home = () => {
                 transition={Zoom}
                 autoClose={4000}
             />
-            <div className="flex h-full relative overflow-x-hidden bg-base-200">
+            <div className="grid grid-cols-4 grid-rows-1 h-screen relative overflow-x-hidden bg-base-200">
                 <div
-                    className={`bg-base-100 w-screen ${
-                        selectedContact !== "" ? "hidden" : "block"
-                    } lg:block lg:w-1/4`}
+                    className={`bg-base-100 overflow-y-auto lg:col-span-1 lg:block ${
+                        selectedContact !== "" ? "hidden" : "col-span-4"
+                    }`}
                 >
                     <input
                         id="my-drawer"
@@ -251,9 +251,9 @@ const Home = () => {
                 </div>
 
                 <div
-                    className={`h-full w-screen ${
-                        selectedContact !== "" ? "block" : "hidden"
-                    } lg:w-3/4 bg-gray-50`}
+                    className={`lg:col-span-3 lg:block col-span-4 bg-base-200 items-center ${
+                        selectedContact !== "" ? "col-span-4" : "hidden"
+                    }`}
                 >
                     {selectedContact ? (
                         <ChatRoom
@@ -266,7 +266,7 @@ const Home = () => {
                             handleSetSelected={() => setSelectedContact("")}
                         />
                     ) : (
-                        <span className="">
+                        <span className="grid place-content-center h-full w-full">
                             Please select a chat to start messaging
                         </span>
                     )}
