@@ -203,7 +203,7 @@ const Sidebar = ({ props }) => {
                         </div>
                     </div>
                     <div className="drawer-side mt-2 h-full self-end">
-                        <div className="flex flex-col my-0 py-0">
+                        <div className="flex flex-col my-5 py-0">
                             {imgPreview ? (
                                 <label htmlFor="avatar">
                                     <img
@@ -337,7 +337,7 @@ const Sidebar = ({ props }) => {
                                 <p className="text-sm mt-2 font-medium">
                                     Devices
                                 </p>
-                                <label className="self-center flex items-center mt-20 pb-20">
+                                <label className="self-center flex items-center mt-10">
                                     Light
                                     <input
                                         type="checkbox"
@@ -371,7 +371,7 @@ const Sidebar = ({ props }) => {
                             users.map((user) => (
                                 <li
                                     key={user.id}
-                                    className="list-none flex items-center py-3 border-b border-base-200 hover:bg-base-200 hover:bg-opacity-30 px-4"
+                                    className="list-none flex items-center py-3 border-b border-base-200 hover:bg-base-300 hover:bg-opacity-20 px-4"
                                     onClick={() =>
                                         setSelectedContact(() => user)
                                     }
