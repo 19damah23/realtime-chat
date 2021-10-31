@@ -176,10 +176,10 @@ const Sidebar = ({ props }) => {
             {sidebar ? (
                 <>
                     <div className="h-7">
-                        <div className="flex justify-start items-center mt-5 text-indigo-400">
+                        <div className="flex justify-start items-center mt-5 text-indigo-400 mx-4">
                             <label
                                 htmlFor="my-drawer"
-                                className="drawer-button"
+                                className="drawer-button p-2 hover:bg-base-300 hover:bg-opacity-25 rounded-sm"
                             >
                                 <svg
                                     className="w-6 h-6"
@@ -355,7 +355,9 @@ const Sidebar = ({ props }) => {
                 <>
                     <div className="h-40 px-4">
                         <div className="flex justify-between items-center mt-8 text-indigo-400">
-                            <h3 className="font-medium text-2xl">Need Your Hug</h3>
+                            <h3 className="font-medium text-2xl">
+                                Need Your Hug
+                            </h3>
                             <Menu />
                         </div>
 
