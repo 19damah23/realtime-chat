@@ -1,5 +1,5 @@
 import PopOver from "./PopOver";
-import People from "../../assets/man.png";
+import People from "../../assets/titikkoma.png";
 import Back from "../../assets/back.png";
 
 const HeaderChat = ({

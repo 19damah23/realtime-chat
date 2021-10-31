@@ -5,7 +5,7 @@ import backendApi from "../../configs/api/backendApi";
 import { ToastContainer, toast, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
-import People from "../../assets/man.png";
+import People from "../../assets/titikkoma.png";
 import { getUser } from "../../configs/redux/actions/userActions";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";

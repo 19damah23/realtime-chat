@@ -1,4 +1,4 @@
-import People from "../../../assets/man.png";
+import People from "../../../assets/titikkoma.png";
 import "react-toastify/dist/ReactToastify.css";
 import "react-confirm-alert/src/react-confirm-alert.css";
 

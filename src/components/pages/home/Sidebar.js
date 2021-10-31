@@ -355,7 +355,7 @@ const Sidebar = ({ props }) => {
                 <>
                     <div className="h-40 px-4">
                         <div className="flex justify-between items-center mt-8 text-indigo-400">
-                            <h3 className="font-medium text-2xl">TELEGRAM</h3>
+                            <h3 className="font-medium text-2xl">Need Your Hug</h3>
                             <Menu />
                         </div>
 
