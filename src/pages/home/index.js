@@ -27,6 +27,7 @@ const Home = () => {
     const [bio, setBio] = useState(false);
     const [imgPreview, setImgPreview] = useState("");
     const [userSelect, setUserSelect] = useState({});
+    const role = localStorage.getItem('role');
 
     const setupSocket = () => {
         const resultSocket = io("http://localhost:4000", {
@@ -74,7 +75,7 @@ const Home = () => {
 
     useEffect(() => {
         backendApi
-            .get(`users?search=${query}`, {
+            .get(`users/users/${role}?search=${query}`, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -85,7 +86,7 @@ const Home = () => {
             .catch((error) => {
                 console.log(error.response);
             });
-    }, [query]);
+    }, [role, query]);
 
     useEffect(() => {
         if (selectedContact) {

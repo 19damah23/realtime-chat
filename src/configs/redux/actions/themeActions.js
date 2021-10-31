@@ -1,8 +1,10 @@
 import { actionTypes } from "../constants/actionTypes";
 
 export const get_initial_theme = () => (dispatch) => {
-    const current_theme = localStorage.getItem("theme");
-    console.log("theme", current_theme);
+    let current_theme = localStorage.getItem("theme");
+
+    if (!current_theme) current_theme = 'light'
+
     dispatch({ type: actionTypes.CHANGE_THEME, payload: current_theme });
 };
 

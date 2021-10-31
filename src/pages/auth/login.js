@@ -21,7 +21,7 @@ const Login = () => {
   });
 
   return (
-    <div className="pt-10">
+    <div className="pt-10 min-h-screen">
       <ToastContainer draggable={false} transition={Zoom} autoClose={4000} />
       <div className="w-11/12 lg:w-1/3 bg-white mx-auto py-5 lg:py-10 rounded-lg h-full flex flex-col px-8 lg:px-16">
         <h3 className="text-center font-rubic text-2xl font-medium text-indigo-300">

@@ -13,7 +13,7 @@ function App() {
     const theme = useSelector((state) => state.theme.theme);
 
     return (
-        <div className="App text-base-content" data-theme={theme}>
+        <div className="App text-base-content bg-base-100" data-theme={theme}>
             <Router />
         </div>
     );
