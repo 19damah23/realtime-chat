@@ -50,6 +50,7 @@ const Register = () => {
                 </span>
                 <Formik
                     initialValues={{
+                        role: "user",
                         email: "",
                         password: "",
                     }}
