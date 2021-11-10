@@ -30,7 +30,7 @@ const Home = () => {
     const role = localStorage.getItem('role');
 
     const setupSocket = () => {
-        const resultSocket = io("http://localhost:4000", {
+        const resultSocket = io("https://api.needyourhug.com", {
             query: {
                 token: localStorage.getItem("token"),
             },
